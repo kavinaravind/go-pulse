@@ -13,10 +13,10 @@ services:
       - ./:/workspace
       - ~/.config/pulse:/home/pulseaudio/.config/pulse
     networks:
-      - infinity_speak
+      - go_pulse
 
 networks:
-  infinity_speak:
-    name: infinity_speak
+  go_pulse:
+    name: go_pulse
     driver: bridge
     external: true
