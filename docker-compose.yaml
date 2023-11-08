@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  server:
+    container_name: go_pulse
+    image: github.com/kavinaravind/go-pulse:0.0.1
+    build:
+      context: .
+      target: dev
+    environment:
+      PULSE_SERVER: tcp:host.docker.internal:34567
+    volumes:
+      - ./:/workspace
+      - ~/.config/pulse:/home/pulseaudio/.config/pulse
+    networks:
+      - infinity_speak
+
+networks:
+  infinity_speak:
+    name: infinity_speak
+    driver: bridge
+    external: true

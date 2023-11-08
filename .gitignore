@@ -1,0 +1,21 @@
+# misc
+.DS_Store
+
+# local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Anything under a tmp folder
+**/tmp/*
+!tmp/.keep
+
+# Anything under a vendor folder
+**/vendor/*
+
+# Anything in the top lavel config folder
+conf
+
+build
